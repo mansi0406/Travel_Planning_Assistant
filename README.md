@@ -92,8 +92,7 @@ AgenticTravelAssistant/
 │ │ # - Weather lookup (Open-Meteo API)
 │ │ # - Budget estimation
 │ ├── data_access.py # JSON data loaders & dataset access helpers
-│ ├── schemas.py # Pydantic / schema definitions for structured outputs
-│ └── utils.py # Common helper utilities (formatting, safety checks)
+│ └──  schemas.py # Pydantic / schema definitions for structured outputs
 │
 ├── data/ # Static datasets (input data)
 │ ├── flights.json # Flight dataset (source, destination, price, duration)
@@ -116,10 +115,6 @@ AgenticTravelAssistant/
 │ ├── test_structured_text_formatters_do_not_crash.py
 │ │ # Ensures output formatting is robust
 │ └── test.py # Optional single test runner / aggregation script
-│
-├── outputs/ # Generated artifacts
-│ ├── <generated_trip_files>.json # Final trip plans (structured JSON output)
-│ └── pytest_results.txt # Stored pytest execution results
 │
 ├── requirements.txt
 └── README.md
@@ -213,25 +208,31 @@ http://localhost:8501
 
 ## 📊 Sample Output (Example) : 
 
-Your 3-Day Trip to Goa (Feb 12–14)
+Your 6-Day Trip to Bangalore (May 29–Jun 3)
 
 Flight:
-- IndiGo – ₹4,800
+- Air India – ₹3,695
 
 Hotel:
-- Sea View Resort – ₹3,200/night (4★)
+- Green Leaf Resort –  ₹5,018/night (4★)
 
 Weather:
-- Day 1: Sunny (31°C)
-- Day 2: Partly Cloudy
-- Day 3: Light Breeze
+- 2026-05-29: Thunderstorm, 35.1°C / 28.7°C
+- 2026-05-30: Thunderstorm, 34.8°C / 28.7°C
+- 2026-05-31: Thunderstorm, 33.6°C / 28.9°C
+- 2026-06-01: Thunderstorm, 33.6°C / 28.7°C
+- 2026-06-02: Thunderstorm, 32.9°C / 28.7°C
+- 2026-06-03: Thunderstorm, 32.8°C / 28.9°C
 
 Itinerary:
-- Day 1: Baga Beach, Candolim Market
-- Day 2: Old Goa Heritage Walk
-- Day 3: Water Sports at Calangute
+- Day 1: Historic Fort (temple), Popular Fort (park), Historic Fort (market) 
+- Day 2: Scenic Museum (market), Shopping at a local market / mall, Street food + shopping street
+- Day 3: Temple visit, art gallery, Cultural show / live music
+- Day 4: Guided food trail / cafe hopping, Relax at hotel / spa / leisure
+- Day 5: Visit a popular park / botanical, City tour (key landmarks + viewpoints), a lake / park + sunset
+- Day 6: Guided heritage walk in the old city area, Shopping at a local market / mall, Street food + shopping street
 
-Total Budget: ₹13,700
+Total Budget: ₹45,803
 
 ---
 
